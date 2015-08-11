@@ -1,0 +1,27 @@
+{
+  "user": {
+    "gender": "male",
+    "name": {
+      "title": "Mr.",
+      "first": "Anis",
+      "last": "Abid"
+    },
+    "location": {
+      "street": "44 Avenue de Paris",
+      "city": "Paris",
+      "state": "",
+      "country": "France",
+      "zip": "92320"
+    },
+    "email": "anab.tn@gmail.com",
+    "username": "anab_tn",
+    "phone": "+33 6 80 98 49 83",
+    "picture": {
+      "large": "http://api.randomuser.me/portraits/women/39.jpg",
+      "medium": "http://api.randomuser.me/portraits/med/women/39.jpg",
+      "thumbnail": "http://api.randomuser.me/portraits/thumb/women/39.jpg"
+    },
+    "version": "0.1",
+    "nationality": "TN"
+  }
+}

@@ -1,0 +1,40 @@
+'use strict';
+
+(function () {
+
+  angular.module('anabApp')
+    .service('ContributorFactory', ['$http', '$q',
+      function ($http, $q) {
+
+        var cf = {
+
+          contributorOwner: function () {
+
+
+            var defer = $q.defer();
+            var parms = {
+              method: "GET",
+              url: 'http://localhost:3000/user'
+            };
+            $http(parms)
+              .success(function (data) {
+                // this callback will be called asynchronously
+                // when the response is available
+
+                return defer.resolve(data);
+              });
+
+            return defer.promise;
+
+          }
+
+        };
+
+        return {
+          contributorOwner: cf.contributorOwner
+        };
+
+      }
+    ]);
+
+})();
