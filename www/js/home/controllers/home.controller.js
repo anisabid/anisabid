@@ -1,11 +1,11 @@
 'use strict';
 
-(function() {
+(function () {
 
   angular.module('anabApp')
-    .controller('HomeController', ['$scope', '$state',
-    function($scope, $state) {
-
-    }]);
+    .controller('HomeController', ['$scope', '$state', 'ContributorOwner',
+      function ($scope, $state, ContributorOwner) {
+        $scope.contributor = ContributorOwner;
+      }]);
 
 })();

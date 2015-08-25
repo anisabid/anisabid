@@ -17,37 +17,15 @@
         },
         link: function (scope, elem) {
 
-          scope.user = {
-            _title: 'Hi, My name is',
-            _value: scope.data.firstname + ' ' + scope.data.lastname
-          };
+          scope.user = scope.data;
 
-          scope.toggleDetailUser = function (t, v) {
-            return scope.user = {
-              _title: t,
-              _value: v
-            }
-          };
-
-          scope.getEmail = function () {
-            var email = scope.data.firstname + '.' + scope.data.lastname + '@amundi.com';
-            var reg = new RegExp(" ", "g");
-            email = email.toLowerCase().replace(reg, '');
-            return email;
-          };
-
-
-          var avatar = angular.element(elem[0].querySelectorAll('.avatar')[0]);
-          var values_list = angular.element(elem[0].querySelectorAll('.values_list')[0]).find('li');
-
-          //var list_li = values_list.find('li');
-
-
-          console.log(values_list);
+          var
+            thumbnail = scope.data.picture.thumbnail,
+            avatar = angular.element(elem[0].querySelectorAll('.avatar')[0]);
 
           // preload image
           var img = new Image();
-          img.src = scope.data.url1;
+          img.src = thumbnail;
 
           var unbind = function () {
             angular.element(img).off();
@@ -56,7 +34,7 @@
 
           angular.element(img).on('load', function () {
             avatar.css({
-              backgroundImage: 'url(' + scope.data.url1 + ')'
+              backgroundImage: 'url(' + thumbnail + ')'
             });
             unbind();
           });
@@ -69,6 +47,7 @@
           var errorImg = function () {
             return true;
           };
+
 
         }
 

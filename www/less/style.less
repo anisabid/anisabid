@@ -10,7 +10,7 @@
 @import "import/include/home";
 @import "import/include/detail";
 
-html, body, main {
+html, body, main, .main {
   width: 100%;
   height: 100%;
   position: relative;
@@ -19,7 +19,9 @@ html, body, main {
 
 body {
   color: @base-master-color;
-  background: @base-master-background;
+  background-color: @base-master-background;
+  background-image: url('../img/bg/paris-flou@1900.jpg');
+  background-position: 50% 50%;
   font-family: @base-font-family;
   font-weight: @base-font-weight-light;
   a {
@@ -33,113 +35,6 @@ body {
     }
   }
 
-  .main-bg-wrap {
-
-    .user-select(none);
-
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background-color: #03A9F4;
-
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: @base-z-index-3;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: transparent;
-      .inner-shadow(0, -8px, 1px, 0.3);
-
-    }
-  }
-
-  .right-bg {
-    position: absolute;
-    width: 140%;
-    height: 180%;
-    background-color: #FF3D00;
-    z-index: @base-z-index-2;
-    top: -30%;
-    right: -54%;
-    .rotation(-50deg);
-    .drop-shadow(0px, -8px, 1px, 0.3);
-  }
-
-  @main-bg-z-index: @base-z-index-1;
-
-  .main-bg {
-    /*height: 180%;
-    width: 150%;
-    position: absolute;
-    z-index: 2;
-    padding: 0;
-    top: -30%;
-    left: -25%;*/
-    height: 160%;
-    width: 90%;
-    position: absolute;
-    z-index: @main-bg-z-index;
-    padding: 0;
-    top: -75%;
-    left: -17%;
-    .transition-duration(0.5s);
-    //.rotation(-15deg);
-    .rotation(-30deg);
-
-    .group-bg {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      .bg1 {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 84%;
-        background-color: #E91E63;
-        z-index: @main-bg-z-index + 1;
-        .inner-shadow(-8px, -8px, 1px, 0.3);
-      }
-      .bg2 {
-        position: absolute;
-        top: 0;
-        bottom: 10%;
-        left: 15.9%;
-        right: 39%;
-        background-color: #FFEB3B;
-        z-index: @main-bg-z-index + 2;
-        .drop-shadow(8px, 8px, 1px, 0.3);
-      }
-      .bg3 {
-        position: absolute;
-        top: 0;
-        bottom: -33%;
-        left: 60.9%;
-        right: 19%;
-        background-color: #8BC34A;
-        z-index: @main-bg-z-index + 3;
-        .drop-shadow(8px, 8px, 1px, 0.3);
-      }
-      .bg4 {
-        position: absolute;
-        top: 0;
-        bottom: -14%;
-        left: 80.9%;
-        right: 0%;
-        background-color: #FF9800;
-        z-index: @main-bg-z-index + 1;
-        .drop-shadow(8px, 8px, 1px, 0.3);
-      }
-    }
-
-  }
 }
 
 
