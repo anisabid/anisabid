@@ -14,7 +14,7 @@
             var parms = {
               method: "GET",
               url: $location.protocol() + '://' + $location.host() + '/contributor.json'
-              url: 'http://localhost:3000/user'
+              //url: 'http://localhost:3000/user'
             };
             $http(parms)
               .success(function (data) {
