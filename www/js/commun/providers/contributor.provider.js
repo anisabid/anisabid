@@ -13,7 +13,7 @@
             var defer = $q.defer();
             var parms = {
               method: "GET",
-              //url: $location.protocol()+'://'+$location.host() + '/contributor.json'
+              url: $location.protocol() + '://' + $location.host() + '/contributor.json'
               url: 'http://localhost:3000/user'
             };
             $http(parms)
