@@ -3,17 +3,17 @@
 (function () {
 
   angular.module('anabApp')
-    .service('ContributorFactory', ['$http', '$q',
-      function ($http, $q) {
+    .service('ContributorFactory', ['$http', '$q', '$location',
+      function ($http, $q, $location) {
 
         var cf = {
 
           contributorOwner: function () {
 
-
             var defer = $q.defer();
             var parms = {
               method: "GET",
+              //url: $location.protocol()+'://'+$location.host() + '/contributor.json'
               url: 'http://localhost:3000/user'
             };
             $http(parms)

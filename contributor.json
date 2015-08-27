@@ -6,6 +6,11 @@
       "first": "Anis",
       "last": "Abid"
     },
+    "job": {
+      "title": "Front End Engineer",
+      "experience": 8,
+      "location": "Paris, France"
+    },
     "location": {
       "street": "44 Avenue de Paris",
       "city": "Paris",

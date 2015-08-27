@@ -1,12 +1,11 @@
 @theme-card-detail-li-number: 4;
 @theme-card-detail-li-width: 80px;
 @theme-card-detail-offset-top: 120px;
-@theme-card-detail-offset-bottom: 30px;
+@theme-card-detail-offset-bottom: 10px;
 @theme-card-detail-avatar-size-width: 120px;
 @theme-card-detail-avatar-size-height: 120px;
 @theme-card-detail-frame-width: 368px;
 @theme-card-detail-frame-height: 660px;
-
 
 .detail-contributor {
   width: 100%;
@@ -20,7 +19,7 @@
     top: 0;
     margin-top: -( @theme-card-detail-frame-height / 2 );
     left: 50%;
-    margin-left: -(@theme-card-detail-frame-width / 2) ;
+    margin-left: -(@theme-card-detail-frame-width / 2);
 
     z-index: @base-z-index-50;
 
@@ -36,7 +35,8 @@
       z-index: 5;
       height: @theme-card-detail-frame-height;
       background-image: url('../img/bg/paris-surface@1900.jpg');
-      background-position: 50% 50%;
+      background-position: 43% 50%;
+      background-size: auto 104%;
 
       &:before {
         position: absolute;
@@ -92,80 +92,41 @@
           padding: 0 0 @theme-card-detail-offset-bottom 0;
         }
 
-        .user_title {
-          color: #999999;
-          font-size: 18px;
-          margin: 0;
+        .details-body {
+          color: #000000;
+        }
+        .user_info_title {
+          font-weight: 300;
+          font-size: 180%;
+          color: #000000;
+          padding-bottom: @theme-card-detail-offset-bottom;
         }
 
-        .user_value {
-          color: #2c2e31;
-          font-size: 32px;
-          font-weight: 400;
-          margin: 5px;
-          line-height: 32px;
-        }
-
-        .values_list {
-          list-style-type: none;
-          margin: 0 auto;
-          padding: 30px 0 0 0;
-          overflow: hidden;
-          width: (@theme-card-detail-li-number * @theme-card-detail-li-width);
-        }
-        .values_list li {
-          cursor: pointer;
-          display: block;
-          width: 40px;
-          height: 48px;
-          float: left;
-          margin: 20px;
-          background-image: url(../img/card_icons.png);
-          -webkit-background-size: 378px 378px;
-          background-size: 378px;
-          background-position-y: -48px;
-          -webkit-transition: all 0.25s ease-out;
-          transition: all 0.25s ease-out;
-        }
-        .values_list li:before {
-          content: attr(data-label);
-          opacity: 0;
-        }
-        .values_list li.active[data-label="name"] {
-          background-position: 0px -96px;
-        }
-        .values_list li.active[data-label="email"] {
-          background-position: -68px -96px;
-        }
-        .values_list li.active[data-label="birthday"] {
-          background-position: -135px -96px;
-        }
-        .values_list li.active[data-label="location"] {
-          background-position: -203px -96px;
-        }
-        .values_list li.active[data-label="phone"] {
-          background-position: -270px -96px;
-        }
-        .values_list li.active[data-label="pass"] {
-          background-position: -338px -96px;
-        }
-        .values_list li[data-label="name"] {
-          background-position: 0px -48px;
-        }
-        .values_list li[data-label="email"] {
-          background-position: -68px -48px;
-        }
-        .values_list li[data-label="birthday"] {
-          background-position: -135px -48px;
-        }
-        .values_list li[data-label="location"] {
-          background-position: -203px -48px;
-        }
-        .values_list li[data-label="phone"] {
-          background-position: -270px -48px;
-        }
-        .values_list li[data-label="pass"] {
-          background-position: -338px -48px;
+        .details-footer {
+          color: white;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          padding: 10px;
+          //background-color: rgba(0, 0, 0, 0.7);
+          border-top: 1px solid rgba(255, 255, 225, 0.05);
+          .border-radius(0, 4px, 4px, 0);
+          font-weight: 100;
+          font-size: 80%;
+          .user_info {
+            margin: 4px;
+            a {
+              color: #ffffff;
+              .transition-duration(0.2s);
+              &:hover {
+                color: #999999;
+              }
+            }
+          }
+          .fa {
+            margin-right: 5px;
+          }
         }
       }
 
